@@ -1,0 +1,37 @@
+<div
+  class="container d-flex flex-column align-items-center justify-content-center"
+>
+  <div class="border border-dark p-5 mt-3 rounded">
+    <h3 class="text-center">Fruit List</h3>
+
+    <label for="">Fruit Name: </label> <br />
+    <input type="text" [(ngModel)]="name" /> <br />
+
+    <label for="">Frut Color: </label> <br />
+    <input type="text" [(ngModel)]="color" /> <br />
+
+    <label for="">Fruit Image: </label> <br />
+    <input type="text" [(ngModel)]="image" /> <br />
+
+    <button
+      type="button"
+      (click)="addFruits()"
+      class="btn btn-outline-danger mt-3 px-4"
+    >
+      Add
+    </button>
+  </div>
+</div>
+
+<div class="container d-flex align-items-center pt-3">
+  <div class="card w-25 h-55 mx-3" *ngFor="let fruit of fruits">
+    <div class="card-header text-center">{{ fruit.fruitName }}</div>
+    <div class="card-body">
+      <ol>
+        <li>{{ fruit.fruitName }}</li>
+        <li>{{ fruit.fruitColor }}</li>
+        <li><img [src]="fruit.fruitImage" class="w-25" /></li>
+      </ol>
+    </div>
+  </div>
+</div>
