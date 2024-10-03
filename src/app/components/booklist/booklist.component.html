@@ -1,0 +1,17 @@
+<div class="d-flex align-items-center justify-content-center gap-2 flex-column">
+  <input
+    type="number"
+    [(ngModel)]="searchId"
+    placeholder="Enter book ID"
+    class="p-1"
+  />
+
+  <button (click)="getBook()" class="btn btn-outline-dark">Search Book</button>
+
+  <div *ngIf="selectedBook" class="border border-dark p-5">
+    <h3>Book Details:</h3>
+    <p><strong>ID:</strong> {{ selectedBook.bookId }}</p>
+    <p><strong>Title:</strong> {{ selectedBook.bookTitle }}</p>
+    <p><strong>Author:</strong> {{ selectedBook.bookAuthor }}</p>
+    <p><strong>Published Year:</strong> {{ selectedBook.bookPublishedYear }}</p>
+  </div>
