@@ -1,0 +1,13 @@
+<div class="d-flex align-items-center justify-content-center gap-3">
+  <input type="text" placeholder="enter a city name" [(ngModel)]="name" />
+  <button (click)="addCity()">Add City</button>
+</div>
+
+<div
+  class="pt-4 border border-dark d-flex justify-content-center align-items-center w-25 my-5 mx-auto h-25 flex-column"
+>
+  <h1>List of Cities</h1>
+  <ul *ngFor="let cty of city">
+    <li>{{ cty.cityName }}</li>
+  </ul>
+</div>
