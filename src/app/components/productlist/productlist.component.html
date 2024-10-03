@@ -1,0 +1,28 @@
+<div class="d-flex align-items-center justify-content-center flex-column">
+  <div
+    class="p-5 border border-dark w-25 d-flex flex-column align-items-center justify-content-center"
+  >
+    <input
+      type="text"
+      placeholder="Insert Product Name"
+      [(ngModel)]="name"
+    /><br />
+    <input
+      type="number"
+      placeholder="Insert Product Price"
+      [(ngModel)]="price"
+    /><br />
+    <input
+      type="text"
+      placeholder="Insert Product Type"
+      [(ngModel)]="type"
+    /><br />
+    <button (click)="addProduct()" class="btn btn-primary">add product</button>
+  </div>
+
+  <div *ngFor="let prod of products">
+    <p>{{ prod.productName }}</p>
+    <p>{{ prod.productPrice }}</p>
+    <p>{{ prod.productType }}</p>
+  </div>
+</div>
