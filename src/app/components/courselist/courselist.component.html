@@ -1,0 +1,29 @@
+<div
+  class="container d-flex flex-column align-items-center justify-content-center"
+>
+  <div class="border border-dark p-5 mt-3 rounded">
+    <h3 class="text-center">Course List</h3>
+
+    <label for="">Enter your course </label> <br />
+    <input type="text" [(ngModel)]="course" /> <br />
+
+    <button
+      type="button"
+      (click)="addCourse()"
+      class="btn btn-outline-danger mt-3 px-4"
+    >
+      Add
+    </button>
+  </div>
+</div>
+
+<div class="container d-flex align-items-center pt-3">
+  <div class="card w-25 h-55 mx-3" *ngFor="let course of courses; let i = index">
+    <div class="card-header text-center">{{ i }}</div>
+    <div class="card-body">
+      <ul>
+        <li>{{ course.course1 }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
