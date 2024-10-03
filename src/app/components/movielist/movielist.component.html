@@ -1,0 +1,15 @@
+<div class="container d-flex align-items-center justify-content-center gap-2 flex-column">
+  <div>
+      <input type="number" [(ngModel)]="id" name="movieId" placeholder="Insert ID" required> <br>
+      <input type="text" [(ngModel)]="title" name="movieTitle" placeholder="Insert Title" required> <br>
+      <input type="text" [(ngModel)]="director" name="movieDirector" placeholder="Insert Director" required> <br>
+      <button type="button" (click)="addMovies()">Add Movie</button>
+  </div>
+
+
+  <div *ngFor="let movies of movies">
+    <p>{{movies.movieId}}</p>
+    <p>{{movies.movieTitle}}</p>
+    <p>{{movies.movieDirector}}</p>
+  </div>
+</div>
