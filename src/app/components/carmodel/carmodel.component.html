@@ -1,0 +1,24 @@
+<div class="d-flex align-items-center justify-content-center gap-2 flex-column">
+  <div>
+    <p class="text-center">
+      <b>Instruction</b>: Type a car name to fetch its data or details <br>
+      (toyota, ford, honda,chevrolet,audi)
+    </p>
+    <p>
+    </p>
+  </div>
+  <input
+    type="text"
+    [(ngModel)]="name"
+    placeholder="Enter book ID"
+    class="p-1"
+  />
+
+  <button (click)="fetchCar()" class="btn btn-outline-dark">Find Car</button>
+
+  <div *ngIf="selectedCar" class="border border-dark p-5">
+    <h3>Car Details:</h3>
+    <p><strong>ID:</strong> {{ selectedCar.carId }}</p>
+    <p><strong>Car Name:</strong> {{ selectedCar.carName }}</p>
+    <p><strong>Brand:</strong> {{ selectedCar.brand }}</p>
+  </div>
