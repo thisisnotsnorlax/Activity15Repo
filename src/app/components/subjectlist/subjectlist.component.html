@@ -1,0 +1,16 @@
+<div class="container d-flex align-items-center justify-content-center flex-column">
+  <div
+    class="d-flex align-items-center justify-content-center flex-column p-5 border border-dark gap-3 w-25 h-50"
+  >
+    <label for="">Enter Your Subject: </label>
+    <input type="text" placeholder="Subject:" [(ngModel)]="subject" />
+    <button class="btn btn-outline-dark" (click)="addSubject()">Add</button>
+  </div>
+
+  <div *ngFor="let subj of subjects" >
+      <ol class="border border-dark p-3 d-flex gap-3 mt-2">
+        <li>{{subj.subjectName}}</li>
+      </ol>
+  </div>
+
+</div>
