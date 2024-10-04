@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      [(ngModel)]="search"
+      class="form-control"
+      placeholder="Enter Animal Type: (Bird, Mammals, Reptiles, Fish, Insects)"
+    />
+    <button (click)="searchAnimal()" class="btn btn-outline-secondary">
+      Search
+    </button>
+  </div>
+
+  <ul>
+    <li *ngFor="let animal of animals">
+      {{ animal }} ({{ animalList[animal] }})
+    </li>
+  </ul>
+</div>
