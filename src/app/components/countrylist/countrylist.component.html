@@ -1,0 +1,14 @@
+<div class="container">
+  <div
+    class="d-flex align-items-center justify-content-center flex-column gap-2 border border-dark w-25 p-5"
+  >
+    <input type="text" placeholder="Enter a country" [(ngModel)]="name" />
+    <button (click)="addCountry()" class="btn btn-outline-dark">Add</button>
+  </div>
+
+  <div>
+    <ul *ngFor="let countries of country">
+      <li>{{ countries.countryName }}</li>
+    </ul>
+  </div>
+</div>
