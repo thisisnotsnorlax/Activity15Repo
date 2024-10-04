@@ -1,0 +1,33 @@
+<div
+  class="container d-flex flex-column align-items-center justify-content-center"
+>
+  <div class="border border-dark p-5 mt-3 rounded">
+    <h3 class="text-center">Vegetable List</h3>
+
+    <label for="">Vegetable Name: </label> <br />
+    <input type="text" [(ngModel)]="vegies" /> <br />
+
+    <button
+      type="button"
+      (click)="addVegies()"
+      class="btn btn-outline-primary mt-3 px-4"
+    >
+      Add
+    </button>
+  </div>
+</div>
+
+<div class="container d-flex align-items-center pt-3">
+  <div class="card w-25 h-55 mx-3" *ngFor="let vegies of vegetables; 
+  let i=index">
+    <div class="card-header text-center">Vegetable</div>
+    <div class="card-body">
+      <ul>
+        <li>{{ vegies.vegetableName }}</li>
+      </ul>
+    </div>
+    <div class="card-footer text-end">
+      <button class="btn btn-outline-danger" (click)="removeVegies(i)">Remove</button>
+    </div>
+  </div>
+</div>
