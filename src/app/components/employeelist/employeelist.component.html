@@ -1,1 +1,29 @@
-<p>employeelist works!</p>
+<div>
+  <input type="text" placeholder="input your name" [(ngModel)]="name" /> <br />
+  <input
+    type="text"
+    placeholder="input your department"
+    [(ngModel)]="department"
+  />
+  <br />
+  <input type="text" placeholder="input your img" [(ngModel)]="img" /> <br />
+
+  <button class="btn btn-outline-info" (click)="addEmployees()">
+    ADD EMPLOYEE
+  </button>
+</div>
+
+<div *ngFor="let emp of employees">
+  <ul>
+    <li class="border border-primary w-25">
+      <p><b>Name:</b> <br />{{ emp.employeeName }}</p>
+
+      <p>
+        <b>Department: </b><br />
+        {{ emp.employeeDept }}
+      </p>
+
+      <img [src]="emp.employeeImg" class="w-25 h-25" />
+    </li>
+  </ul>
+</div>
