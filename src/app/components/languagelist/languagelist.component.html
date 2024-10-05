@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      [(ngModel)]="search"
+      class="form-control"
+      placeholder="Enter a Country Name (e.g., Italy, Brazil, Japan)"
+    />
+    <button (click)="filterLanguage()" class="btn btn-outline-secondary">
+      Search
+    </button>
+  </div>
+
+  <ul>
+    <li *ngFor="let lang of languages">
+      {{ lang }} ({{ languageList[lang] }})
+    </li>
+  </ul>
+</div>
